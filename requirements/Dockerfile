@@ -1,13 +1,8 @@
 # NOTE: this docker file is only for local testing of the build
-# it should be copied or symlinked up one directory as docker
-# can't go into parent directories
-# example of testing a build locally:
-
-# ln -sf requirements/Dockerfile .
-# docker build . -t pythonfcl
+# Build it from the python-fcl repository folder like this:
+# docker build -t pythonfcl -f requirements/Dockerfile .
 
 FROM quay.io/pypa/manylinux1_x86_64:latest
-
 
 RUN yum install -y gcc 
 
